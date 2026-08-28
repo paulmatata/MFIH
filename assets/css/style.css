@@ -1,0 +1,809 @@
+/* =========================================================
+   FIH GLOBAL STYLES
+   Farmers Intelligence Hub
+   ========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --fih-primary: #2e7d32;
+    --fih-primary-dark: #1b5e20;
+    --fih-primary-light: #e8f5e9;
+
+    --fih-secondary: #1565c0;
+    --fih-secondary-light: #e3f2fd;
+
+    --fih-accent: #f9a825;
+    --fih-danger: #c62828;
+    --fih-success: #2e7d32;
+
+    --fih-text: #263238;
+    --fih-muted: #607d8b;
+
+    --fih-background: #f7faf7;
+    --fih-surface: #ffffff;
+
+    --fih-border: #dfe7df;
+
+    --fih-radius-sm: 8px;
+    --fih-radius-md: 12px;
+    --fih-radius-lg: 18px;
+
+    --fih-shadow-sm:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+    --fih-shadow-md:
+        0 8px 24px rgba(0, 0, 0, 0.08);
+
+    --fih-transition:
+        0.2s ease;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: var(--fih-text);
+
+    background:
+        var(--fih-background);
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   3. GENERAL ELEMENTS
+   ========================================================= */
+
+img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+a {
+    color: var(--fih-primary);
+
+    text-decoration: none;
+
+    transition:
+        color var(--fih-transition);
+}
+
+
+a:hover {
+    color: var(--fih-primary-dark);
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   4. GLOBAL CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        100% - 32px,
+        1200px
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   5. BUTTONS
+   ========================================================= */
+
+.primary-button,
+.secondary-button,
+.danger-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding:
+        10px
+        18px;
+
+    border: none;
+
+    border-radius:
+        var(--fih-radius-sm);
+
+    font-weight: 600;
+
+    text-align: center;
+
+    transition:
+        transform var(--fih-transition),
+        box-shadow var(--fih-transition),
+        background var(--fih-transition);
+}
+
+
+.primary-button {
+    color: #ffffff;
+
+    background:
+        var(--fih-primary);
+
+    box-shadow:
+        var(--fih-shadow-sm);
+}
+
+
+.primary-button:hover {
+    background:
+        var(--fih-primary-dark);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        var(--fih-shadow-md);
+}
+
+
+.primary-button:active {
+    transform:
+        translateY(0);
+}
+
+
+.secondary-button {
+    color:
+        var(--fih-primary);
+
+    background:
+        var(--fih-primary-light);
+
+    border:
+        1px solid
+        #c8e6c9;
+}
+
+
+.secondary-button:hover {
+    background:
+        #dceddd;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.danger-button {
+    color: #ffffff;
+
+    background:
+        var(--fih-danger);
+}
+
+
+.danger-button:hover {
+    background:
+        #8e0000;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   6. FORM ELEMENTS
+   ========================================================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    min-height: 44px;
+
+    padding:
+        10px
+        12px;
+
+    color:
+        var(--fih-text);
+
+    background:
+        var(--fih-surface);
+
+    border:
+        1px solid
+        var(--fih-border);
+
+    border-radius:
+        var(--fih-radius-sm);
+
+    outline: none;
+
+    transition:
+        border-color var(--fih-transition),
+        box-shadow var(--fih-transition),
+        background var(--fih-transition);
+}
+
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color:
+        #aab9aa;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color:
+        var(--fih-primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(46, 125, 50, 0.12);
+}
+
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+    background:
+        #f1f3f1;
+}
+
+
+/* =========================================================
+   7. LABELS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        var(--fih-text);
+
+    font-size: 0.92rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   8. CARDS
+   ========================================================= */
+
+.card {
+    padding: 20px;
+
+    background:
+        var(--fih-surface);
+
+    border:
+        1px solid
+        var(--fih-border);
+
+    border-radius:
+        var(--fih-radius-md);
+
+    box-shadow:
+        var(--fih-shadow-sm);
+
+    transition:
+        transform var(--fih-transition),
+        box-shadow var(--fih-transition);
+}
+
+
+.card:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        var(--fih-shadow-md);
+}
+
+
+/* =========================================================
+   9. ALERTS
+   ========================================================= */
+
+.alert {
+    padding:
+        12px
+        14px;
+
+    margin-bottom: 16px;
+
+    border-radius:
+        var(--fih-radius-sm);
+
+    font-size: 0.92rem;
+}
+
+
+.alert-success {
+    color:
+        #1b5e20;
+
+    background:
+        #e8f5e9;
+
+    border:
+        1px solid
+        #c8e6c9;
+}
+
+
+.alert-danger {
+    color:
+        #8e0000;
+
+    background:
+        #ffebee;
+
+    border:
+        1px solid
+        #ffcdd2;
+}
+
+
+.alert-info {
+    color:
+        #0d47a1;
+
+    background:
+        #e3f2fd;
+
+    border:
+        1px solid
+        #bbdefb;
+}
+
+
+.alert-warning {
+    color:
+        #7f6000;
+
+    background:
+        #fff8e1;
+
+    border:
+        1px solid
+        #ffecb3;
+}
+
+
+/* =========================================================
+   10. REGISTRATION STEP INDICATOR
+   ========================================================= */
+
+.step-indicator {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+
+.step-indicator span {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    color:
+        var(--fih-muted);
+
+    background:
+        #edf1ed;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    transition:
+        background var(--fih-transition),
+        color var(--fih-transition),
+        transform var(--fih-transition);
+}
+
+
+.step-indicator span.active {
+    color: #ffffff;
+
+    background:
+        var(--fih-primary);
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================================
+   11. STEP NAVIGATION
+   ========================================================= */
+
+.button-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 24px;
+}
+
+
+.button-row > * {
+    flex: 1;
+}
+
+
+/* =========================================================
+   12. REGISTRATION STEPS
+   ========================================================= */
+
+.registration-step {
+    display: none;
+}
+
+
+.registration-step.active {
+    display: block;
+
+    animation:
+        fihStepIn 0.25s ease;
+}
+
+
+@keyframes fihStepIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   13. FORM HELP TEXT
+   ========================================================= */
+
+.step-description {
+    margin-bottom: 20px;
+
+    color:
+        var(--fih-muted);
+
+    font-size: 0.92rem;
+}
+
+
+small {
+    color:
+        var(--fih-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   14. LOADING STATE
+   ========================================================= */
+
+.is-loading {
+    pointer-events: none;
+
+    opacity: 0.65;
+}
+
+
+.loading-text {
+    color:
+        var(--fih-muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   15. FOCUS ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline:
+        3px solid
+        rgba(21, 101, 192, 0.35);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   16. MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width:
+            min(
+                100% - 24px,
+                1200px
+            );
+    }
+
+
+    .primary-button,
+    .secondary-button,
+    .danger-button {
+        min-height: 46px;
+
+        padding:
+            10px
+            14px;
+    }
+
+
+    .card {
+        padding: 16px;
+    }
+
+
+    .button-row {
+        gap: 8px;
+    }
+
+
+    .step-indicator {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   17. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+}
+/*navbar css*/
+
+/* =========================================================
+   FIH SITE NAVBAR
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.site-navbar {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 5%;
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   Brand
+   --------------------------------------------------------- */
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1.1;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.brand-tagline {
+    font-size: 0.7rem;
+    opacity: 0.75;
+    margin-top: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   Navigation links
+   --------------------------------------------------------- */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-link,
+.navbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.navbar-link:hover,
+.navbar-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+/* ---------------------------------------------------------
+   Create account button
+   --------------------------------------------------------- */
+
+.navbar-button {
+    border: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Mobile toggle
+   --------------------------------------------------------- */
+
+.navbar-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .site-navbar {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 10px;
+    }
+
+    .navbar-menu.is-open {
+        display: flex;
+    }
+
+    .navbar-link,
+    .navbar-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

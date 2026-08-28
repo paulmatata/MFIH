@@ -1,0 +1,176 @@
+/* =====================================================
+   FARMERS INNOVATION HUB
+   GLOBAL INTEGRATION
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: #17351c;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =====================================================
+   MEDIA
+===================================================== */
+
+img,
+svg,
+video {
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+a {
+    color: inherit;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+}
+
+
+/* =====================================================
+   SECTION LABEL
+   Shared by homepage sections
+===================================================== */
+
+.section-label {
+
+    display: inline-block;
+
+    margin-bottom: 17px;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    color: #43A047;
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal-on-scroll {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+}
+
+
+.reveal-on-scroll.is-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+:focus-visible {
+
+    outline:
+        3px solid
+        rgba(76, 175, 80, 0.45);
+
+    outline-offset: 4px;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+
+    .reveal-on-scroll {
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+}

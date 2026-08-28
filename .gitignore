@@ -1,0 +1,25 @@
+# =====================================================
+# FARMERS INNOVATION HUB
+# =====================================================
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration
+config/local.php
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp

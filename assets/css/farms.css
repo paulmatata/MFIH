@@ -1,0 +1,126 @@
+/* =========================================================
+   MY FARMS
+   ========================================================= */
+
+.farms-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 18px;
+}
+
+
+.farm-card {
+    padding: 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+.farm-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.farm-number {
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+    opacity: 0.55;
+}
+
+
+.farm-card h2 {
+    margin: 4px 0 0;
+
+    font-size: 1.15rem;
+}
+
+
+.farm-location {
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+.farm-location strong {
+    font-size: 0.78rem;
+
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+
+.farm-location p {
+    margin: 5px 0 0;
+
+    line-height: 1.5;
+}
+
+
+.farm-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 16px;
+}
+
+
+.farm-details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.farm-details span {
+    font-size: 0.7rem;
+
+    opacity: 0.55;
+}
+
+
+.farm-details strong {
+    font-size: 0.82rem;
+}
+
+
+.farm-card-actions {
+    margin-top: 18px;
+}
+
+
+@media (max-width: 600px) {
+
+    .farms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .farm-details {
+        grid-template-columns: 1fr;
+    }
+
+}

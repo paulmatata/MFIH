@@ -1,0 +1,229 @@
+/* =====================================================
+   FARMERS INNOVATION HUB
+   MILESTONE 1.2.9
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    position: relative;
+
+    background: #102914;
+
+    color: #ffffff;
+}
+
+
+.footer-container {
+
+    width: min(1120px, 92%);
+
+    margin: 0 auto;
+
+    padding: 75px 0 65px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 55px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand {
+
+    max-width: 350px;
+}
+
+
+.footer-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+
+    line-height: 1.15;
+}
+
+
+.footer-logo strong {
+
+    display: block;
+
+    color: #A5D6A7;
+}
+
+
+.footer-logo-mark {
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    font-size: 1.25rem;
+}
+
+
+.footer-brand p {
+
+    margin: 22px 0 17px;
+
+    font-size: 0.82rem;
+
+    line-height: 1.75;
+
+    color:
+        rgba(255,255,255,0.57);
+}
+
+
+.footer-tagline {
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: #81C784;
+}
+
+
+/* =====================================================
+   COLUMNS
+===================================================== */
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-column h3 {
+
+    margin: 0 0 20px;
+
+    font-size: 0.78rem;
+
+    color: #ffffff;
+}
+
+
+.footer-column a {
+
+    margin-bottom: 12px;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    color:
+        rgba(255,255,255,0.52);
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.footer-column a:hover {
+
+    color: #A5D6A7;
+
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.footer-bottom {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+
+.footer-bottom-inner {
+
+    width: min(1120px, 92%);
+
+    margin: 0 auto;
+
+    padding: 22px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    font-size: 0.68rem;
+
+    color:
+        rgba(255,255,255,0.38);
+}
+
+
+.footer-bottom-links {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-bottom-links a {
+
+    text-decoration: none;
+
+    font-size: 0.68rem;
+
+    color:
+        rgba(255,255,255,0.42);
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.footer-bottom-links a:hover {
+
+    color: #A5D6A7;
+}

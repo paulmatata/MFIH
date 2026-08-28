@@ -1,0 +1,457 @@
+/* =========================================================
+   FIH AUTHENTICATION
+   Mobile-first styles
+   ========================================================= */
+
+:root {
+    --fih-primary: #167a4a;
+    --fih-primary-dark: #0f5d38;
+    --fih-secondary: #1f8f58;
+
+    --fih-text: #1f2933;
+    --fih-muted: #667085;
+
+    --fih-background: #f5f8f6;
+    --fih-card: #ffffff;
+
+    --fih-border: #d9e1dc;
+    --fih-danger: #c93636;
+
+    --fih-radius: 16px;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 24px 16px;
+
+    background: var(--fih-background);
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.auth-card {
+    width: 100%;
+    max-width: 520px;
+
+    background: var(--fih-card);
+
+    border-radius: var(--fih-radius);
+
+    padding: 24px 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 24px;
+}
+
+.auth-header h1 {
+    margin: 0 0 8px;
+
+    font-size: 1.6rem;
+
+    line-height: 1.25;
+
+    color: var(--fih-text);
+}
+
+.auth-header p {
+    margin: 0;
+
+    color: var(--fih-muted);
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   STEP INDICATOR
+   ========================================================= */
+
+.step-indicator {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+}
+
+.step-indicator span {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7eee9;
+
+    color: var(--fih-muted);
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
+}
+
+.step-indicator span.active {
+    background: var(--fih-primary);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   REGISTRATION STEP
+   ========================================================= */
+
+.registration-step {
+    display: none;
+}
+
+.registration-step.active {
+    display: block;
+}
+
+.registration-step h2 {
+    margin: 0 0 6px;
+
+    color: var(--fih-text);
+
+    font-size: 1.25rem;
+}
+
+.step-description {
+    margin: 0 0 22px;
+
+    color: var(--fih-muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+.registration-step label {
+    display: block;
+
+    margin: 16px 0 7px;
+
+    color: var(--fih-text);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+.registration-step input,
+.registration-step select {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--fih-border);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: var(--fih-text);
+
+    font-size: 1rem;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.registration-step input:focus,
+.registration-step select:focus {
+    border-color: var(--fih-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(22, 122, 74, 0.12);
+}
+
+.registration-step select:disabled {
+    background: #f1f4f2;
+
+    color: #98a19b;
+}
+
+.registration-step small {
+    color: var(--fih-muted);
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.primary-button,
+.secondary-button {
+    min-height: 50px;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease;
+}
+
+.primary-button {
+    width: 100%;
+
+    background: var(--fih-primary);
+
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: var(--fih-primary-dark);
+}
+
+.primary-button:active,
+.secondary-button:active {
+    transform: scale(0.98);
+}
+
+.secondary-button {
+    flex: 0 0 35%;
+
+    background: #e9efeb;
+
+    color: var(--fih-text);
+}
+
+.button-row {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.button-row .primary-button {
+    flex: 1;
+}
+
+
+/* =========================================================
+   ERROR BOX
+   ========================================================= */
+
+.form-errors {
+    margin-bottom: 20px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #fff1f1;
+
+    border: 1px solid #f0caca;
+
+    color: var(--fih-danger);
+}
+
+.form-errors p {
+    margin: 4px 0;
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .auth-page {
+        align-items: center;
+
+        padding: 40px 20px;
+    }
+
+    .auth-card {
+        padding: 34px;
+    }
+
+    .auth-header h1 {
+        font-size: 1.8rem;
+    }
+}
+/* =========================================================
+   CONSENT
+   ========================================================= */
+
+.consent-option {
+    display: flex !important;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 22px !important;
+
+    font-weight: 400 !important;
+
+    cursor: pointer;
+}
+
+.consent-option input {
+    width: 18px !important;
+    min-width: 18px;
+
+    height: 18px;
+
+    min-height: 18px;
+
+    margin-top: 2px;
+
+    padding: 0;
+
+    box-shadow: none !important;
+}
+
+.consent-option span {
+    color: var(--fih-muted);
+
+    font-size: 0.85rem;
+
+    line-height: 1.45;
+}
+
+/*login page styles*/
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h1 {
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    margin: 0;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #d8dce2;
+    border-radius: 9px;
+    font: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 13px 16px;
+    border: 0;
+    border-radius: 9px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+
+.auth-error {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.auth-footer {
+    margin-top: 20px;
+    text-align: center;
+}
