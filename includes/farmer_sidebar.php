@@ -147,27 +147,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <span>My Farms</span>
 
             </a>
-
-            <a
-    href="<?= e(FIH_BASE_URL) ?>/farmer/farm-location.php"
-    class="sidebar-link"
+<a 
+    href="<?= e(FIH_BASE_URL) ?>/farmer/crop-health.php"
+    class="sidebar-link <?= $current_page === 'crop-health.php' ? 'active' : '' ?>"
 >
-    <span class="sidebar-icon">📍</span>
-    <span>Update Farm Location</span>
+    <span class="sidebar-icon">🌿</span>
+    <span>Crop Health</span>
 </a>
 <a
-    href="<?= e(FIH_BASE_URL) ?>/farmer/weather-observations.php"
-    class="sidebar-link <?= $current_page === 'weather-observations.php' ? 'active' : '' ?>"
+    href="<?= e(FIH_BASE_URL) ?>/farmer/harvests.php"
+    class="sidebar-link <?= $current_page === 'harvests.php' ? 'active' : '' ?>"
 >
-
-    <span class="sidebar-icon">
-        🌦️
-    </span>
-
-    <span>
-        Weather Reports
-    </span>
-
+   <span class="sidebar-icon">🌾</span>
+   <span>Harvest Reports</span>
 </a>
         </div>
 

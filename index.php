@@ -3,7 +3,6 @@ include 'includes/header.php';
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/header.php';
 include 'includes/navbar.php';
-echo generate_uuid();
 ?>
 <!-- ===========================
      HERO SECTION
